@@ -1,0 +1,46 @@
+@media (max-width: 768px) {
+    .navbar .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--header-height);
+        right: 0;
+        background: var(--primary-color);
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    #nav-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-top: 20px;
+    }
+
+    .clients-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clients-carousel img {
+        max-height: 60px;
+    }
+}

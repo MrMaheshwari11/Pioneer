@@ -1,0 +1,39 @@
+.hero-section {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.7), rgba(0, 150, 136, 0.7)), url('your-hero-background-image.jpg') no-repeat center center/cover;
+    /* background: linear-gradient(to right, #008080, #20B2AA), url('your-hero-background-image.jpg') no-repeat center center/cover; */
+
+    color: #ffffff;
+    text-align: center;
+    padding: 120px 20px; /* Increased padding */
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Added text shadow for better readability */
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #FF6347;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover, .submit-button:hover {
+    background-color: orangered;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for better interaction feedback */
+    text-decoration: none;
+}
