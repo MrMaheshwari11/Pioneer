@@ -1,39 +1,119 @@
 .hero-section {
-    background: linear-gradient(135deg, rgba(26, 26, 46, 0.7), rgba(0, 150, 136, 0.7)), url('your-hero-background-image.jpg') no-repeat center center/cover;
-    /* background: linear-gradient(to right, #008080, #20B2AA), url('your-hero-background-image.jpg') no-repeat center center/cover; */
-
-    color: #ffffff;
-    text-align: center;
-    padding: 120px 20px; /* Increased padding */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Added text shadow for better readability */
+    text-align: center;
+    padding: 150px 20px;
+    color: var(--white);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation: changeBackground 30s infinite alternate;
+    transition: background-image 1s ease-in-out, transform 0.5s ease;
 }
 
+/* .hero-section:hover {
+    transform: scale(1.03);
+} */
+
+@keyframes changeBackground {
+    0%, 100% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food1.jpg');
+    }
+    10% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food2.jpg');
+    }
+    20% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food3.jpg');
+    }
+    30% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food4.jpg');
+    }
+    40% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food5.jpg');
+    }
+    50% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food6.jpg');
+    }
+    60% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food7.jpg');
+    }
+    70% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food8.jpg');
+    }
+    80% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/dhokla.jpg');
+    }
+    90% {
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/biryani1.jpg');
+    }
+}
 .hero-content h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
-
 
 .hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* CTA Button */
 .cta-button {
     display: inline-block;
-    padding: 12px 24px;
-    font-size: 1.1rem;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     font-weight: 600;
-    color: #ffffff;
-    background-color: #FF6347;
+    color: var(--white);
+    background-color: var(--accent-color);
     border: none;
-    border-radius: 8px;
+    border-radius: 30px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.cta-button:hover, .submit-button:hover {
-    background-color: orangered;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for better interaction feedback */
-    text-decoration: none;
+.cta-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .hero-section {
+        padding: 120px 20px;
+    }
 }
