@@ -1,3 +1,4 @@
+/* Hero Section */
 .hero-section {
     background-size: cover;
     background-attachment: fixed;
@@ -10,44 +11,46 @@
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     animation: changeBackground 30s infinite alternate;
     transition: background-image 1s ease-in-out, transform 0.5s ease;
-}
-
-/* .hero-section:hover {
-    transform: scale(1.03);
 } */
+
+.hero-section:hover {
+    transform: scale(1.03);
+}
 
 @keyframes changeBackground {
     0%, 100% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food1.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/food1.jpg');
     }
     10% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food2.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/food2.jpg');
     }
     20% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food3.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/food3.jpg');
     }
     30% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food4.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/food4.jpg');
     }
     40% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food5.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/food5.jpg');
     }
     50% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food6.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/food6.jpg');
     }
     60% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food7.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/food7.jpg');
     }
     70% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/food8.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/food8.jpg');
     }
     80% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/dhokla.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/dhokla.jpg');
     }
     90% {
-        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('./Company Images/biryani1.jpg');
+        background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(0, 0, 0, 0)), url('Food Images/biryani1.jpg');
     }
 }
+
+
 .hero-content h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 20px;
