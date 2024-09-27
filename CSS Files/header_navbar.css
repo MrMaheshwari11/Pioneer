@@ -1,9 +1,10 @@
 .header {
-    background-color: #1E1E2F;
+    background-color: var(--primary-color);
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -12,14 +13,19 @@
     align-items: center;
     padding: 0 20px;
     height: var(--header-height);
-    background: rgba(26, 26, 46, 0.8);
+    background: rgba(26, 26, 46, 0.9);
 }
 
 .navbar .logo {
     color: var(--white);
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar .logo:hover {
+    color: var(--accent-color);
 }
 
 .navbar .nav-menu {
@@ -28,15 +34,15 @@
 }
 
 .nav-menu li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .nav-menu a {
     color: var(--white);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    transition: color 0.3s; /* Added transition for smooth color change */
+    transition: color 0.3s;
 }
 
 .nav-menu a:hover {
