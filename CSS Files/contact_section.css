@@ -1,6 +1,6 @@
 .contact-section {
     padding: 60px 20px;
-    background-color: #E0E7E9;
+    background-color: #E0E7E9; /* Light background */
     text-align: center;
 }
 
@@ -22,16 +22,25 @@ form {
 .form-group label {
     margin-bottom: 5px;
     font-weight: bold;
+    color: #333; /* Dark color for contrast */
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px; /* Rounded corners */
     font-size: 1rem;
     box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff; /* Accent color */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow */
+    outline: none; /* Remove default outline */
 }
 
 .form-group textarea {
@@ -41,22 +50,31 @@ form {
 .submit-button {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Adequate padding for touch targets */
     border: none;
-    border-radius: 5px;
+    border-radius: 50px; /* Rounded button */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect */
+} /* Fixed missing bracket here */
+
+.submit-button:active {
+    transform: scale(0.95); /* Button shrinks slightly on click */
 }
 
 .form-message {
     display: none;
     margin-top: 20px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px; /* Rounded corners for messages */
+    width: 100%;
+    /* max-width: 600px; Center the message */
+    transition: opacity 0.3s ease; /* Smooth transition */
 }
 
 .form-message.success {
@@ -72,4 +90,20 @@ form {
 #loader {
     margin-top: 20px;
     font-size: 1.2rem;
+    color: #007bff; /* Loader color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .form-group {
+        width: 90%; /* Use more width on smaller screens */
+    }
+
+    .submit-button {
+        width: 100%; /* Full width button on small screens */
+    }
 }
